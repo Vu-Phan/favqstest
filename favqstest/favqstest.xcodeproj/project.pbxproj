@@ -81,6 +81,7 @@
 		4B8905B826EE14B300BF7DA3 /* QuoteM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8905B726EE14B300BF7DA3 /* QuoteM.swift */; };
 		4B8905BB26EE14FB00BF7DA3 /* FavQuoteItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8905BA26EE14FB00BF7DA3 /* FavQuoteItemView.swift */; };
 		4B8905BD26EE153200BF7DA3 /* FavQuoteItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B8905BC26EE153200BF7DA3 /* FavQuoteItemView.xib */; };
+		4B8905BF26EE31E800BF7DA3 /* MainFavQuoteUserNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8905BE26EE31E800BF7DA3 /* MainFavQuoteUserNavBarView.swift */; };
 		A2B00B26D137BF000171FA4C /* Pods_favqstest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05760B1DC555349E30824E2F /* Pods_favqstest.framework */; };
 /* End PBXBuildFile section */
 
@@ -163,6 +164,7 @@
 		4B8905B726EE14B300BF7DA3 /* QuoteM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteM.swift; sourceTree = "<group>"; };
 		4B8905BA26EE14FB00BF7DA3 /* FavQuoteItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavQuoteItemView.swift; sourceTree = "<group>"; };
 		4B8905BC26EE153200BF7DA3 /* FavQuoteItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavQuoteItemView.xib; sourceTree = "<group>"; };
+		4B8905BE26EE31E800BF7DA3 /* MainFavQuoteUserNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFavQuoteUserNavBarView.swift; sourceTree = "<group>"; };
 		5DE07CC8D8DE1D3D6DA405C1 /* Pods-favqstest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-favqstest.debug.xcconfig"; path = "Target Support Files/Pods-favqstest/Pods-favqstest.debug.xcconfig"; sourceTree = "<group>"; };
 		73829D3866255ADF9B8F712E /* Pods-favqstest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-favqstest.release.xcconfig"; path = "Target Support Files/Pods-favqstest/Pods-favqstest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -274,6 +276,7 @@
 				4B89050B26EDFF0700BF7DA3 /* LoginVC.swift */,
 				4B8905B326EE132600BF7DA3 /* MainFavQuoteVC.swift */,
 				4B8905B526EE148500BF7DA3 /* MainFavQuoteTVCell.swift */,
+				4B8905BE26EE31E800BF7DA3 /* MainFavQuoteUserNavBarView.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -606,6 +609,7 @@
 				4B89058A26EE049A00BF7DA3 /* PrGradientView.swift in Sources */,
 				4B89059326EE049A00BF7DA3 /* PrDevice.swift in Sources */,
 				4B8905A326EE0A6100BF7DA3 /* ErrorM.swift in Sources */,
+				4B8905BF26EE31E800BF7DA3 /* MainFavQuoteUserNavBarView.swift in Sources */,
 				4B89059126EE049A00BF7DA3 /* PrSystem.swift in Sources */,
 				4B89057526EE049A00BF7DA3 /* UIView+Extension.swift in Sources */,
 				4B8905AE26EE0E6300BF7DA3 /* AppNavigationVC.swift in Sources */,

@@ -10,6 +10,8 @@ import UIKit
 class MainFavQuoteVC: AppNavigationVC {
     // MARK: Xib
     var tableView: UITableView!
+    // MARK: UI
+    var userNavBar: MainFavQuoteUserNavBarView!
     // MARK: Data
     var quoteTableData: [QuoteM] = []
     var isServiceLoading = false
@@ -31,6 +33,14 @@ class MainFavQuoteVC: AppNavigationVC {
         getUserFavoriteQuote()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationBar.layoutIfNeeded()
+        navigationBar.updateExpandHeight(userNavBar.pr_height)
+        navigationBar.displayExpandBar()
+        
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         tableView.reloadData()
@@ -39,19 +49,27 @@ class MainFavQuoteVC: AppNavigationVC {
     
     // MARK: - UI
     private func setupNavigationBar() {
-        var login = ""
-        if let user = App.shared.user {
-            login = user.login
-        }
-        navigationBar.setupTitle("Welcome \(login)")
-        navigationBar.setupLeftAction(icon: .home)
+        navigationBar.setupLeftAction(icon: .refresh)
         navigationBar.onLeftActionTap = {
-            self.getUserFavoriteQuote()
+            self.refreshFromStart()
         }
         navigationBar.setupRightAction(icon: .logout)
         navigationBar.onRightActionTap = {
             self.logout()
         }
+        
+        userNavBar = MainFavQuoteUserNavBarView.init(inView: navigationBar.expandContentView)
+        
+        var pictureUrl = ""
+        var login = "Unknown"
+        var favoriteCount = 0
+        if let user = App.shared.user {
+            login = user.login
+            pictureUrl = user.pictureUrl
+            favoriteCount = user.publicFavoritesCount
+        }
+        navigationBar.setupTitle("Welcome \(login)")
+        userNavBar.setup(pictureUrl: pictureUrl, login: login, favoriteCount: favoriteCount)
     }
     
     private func setupUI() {
@@ -75,6 +93,11 @@ class MainFavQuoteVC: AppNavigationVC {
         quoteTableData = [quote]
         
         self.tableView.reloadData()
+    }
+    
+    private func refreshFromStart() {
+        servicePage = 0
+        getUserFavoriteQuote()
     }
     
     private func getUserFavoriteQuote(more: Bool = false) {
@@ -135,15 +158,15 @@ extension MainFavQuoteVC: UITableViewDelegate, UITableViewDataSource {
     
     // MARK: + Scroll View
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        //navigationBar.scrollViewDidScroll(scrollView)
+        navigationBar.scrollViewDidScroll(scrollView)
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        //navigationBar.scrollViewWillBeginDragging(scrollView)
+        navigationBar.scrollViewWillBeginDragging(scrollView)
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        //navigationBar.scrollViewDidEndDragging(scrollView)
+        navigationBar.scrollViewDidEndDragging(scrollView)
     }
 }
 

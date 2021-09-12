@@ -17,6 +17,7 @@ class AppNavigationBarView: UIView {
         case search = "magnifyingglass"
         case more = "ellipsis"
         case filter = "line.horizontal.3.decrease"
+        case refresh = "arrow.clockwise.circle"
     }
     // MARK:
     // MARK: + Attr
@@ -344,7 +345,7 @@ class AppNavigationBarView: UIView {
         let translationY = scrollView.panGestureRecognizer.translation(in: scrollView).y
         let isGestureUp = translationY <= lastTranslationY ? true : false
         let gestureState = scrollView.panGestureRecognizer.state
-        let threshold = (Pr.device.getScreenSize().height / 5) * 3
+        let threshold = (Pr.device.getScreenSize().height / 5) * 2
         /*
         var stateDb = ""
         switch gestureState {
