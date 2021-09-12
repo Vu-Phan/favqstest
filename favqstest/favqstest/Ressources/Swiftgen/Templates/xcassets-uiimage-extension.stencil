@@ -1,0 +1,68 @@
+// swiftlint:disable all
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
+
+{% if catalogs %}
+{% set nameExt %}UIImage{% endset %}
+{% set forceNamespaces %}{{param.forceProvidesNamespaces|default:"false"}}{% endset %}
+{% set accessModifier %}{% if param.publicAccess %}public{% else %}internal{% endif %}{% endset %}
+{% set appClass %}{{param.forceAppClass|default:"app"}}{% endset %}
+
+// MARK: - UIImage extension from .xcassets
+import UIKit
+{% macro assetsBlock assets %}
+    {% call staticListBlock assets %}
+	{% if param.allValues %}
+		{% call allValuesBlock assets %}
+    {% endif %}
+    {% if param.enum %}
+		{% call enumNameBlock assets %}
+    {% endif %}
+{% endmacro %}
+{% macro staticListBlock assets %}
+	{% for asset in assets %}
+	{% if asset.type == "image" %}
+		static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = UIImage.setupImage("{{asset.value}}")
+	{% elif asset.items %}
+		{% call staticListBlock asset.items %}
+	{% endif %}
+	{% endfor %}
+{% endmacro %}
+{% macro allValuesBlock assets %}
+		static var allValues: [{{nameExt}}] = [
+	{% for asset in assets %}
+		{% if asset.type == "image" %}
+			{{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}},
+		{% endif %}
+	{% endfor %}
+		]
+{% endmacro %}
+{% macro enumNameBlock assets %}
+		enum Name: String {
+	{% for asset in assets %}
+		{% if asset.type == "image" %}
+			case {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = "{{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}}"
+		{% endif %}
+	{% endfor %}
+		}
+{% endmacro %}
+
+{{accessModifier}} extension {{nameExt}} {
+	static private func setupImage(_ named: String) -> UIImage {
+		return UIImage(named: named) ?? UIImage()
+	}
+	
+	struct {{appClass}} {
+	{% if catalogs.count > 1 %}
+		{% for catalog in catalogs %}
+			{{accessModifier}} enum {{catalog.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
+				{% filter indent:4 %}{% call enumBlock catalog.assets %}{% endfilter %}
+			}
+	{% endfor %}
+	{% else %}
+		{% call assetsBlock catalogs.first.assets %}
+    {% endif %}
+    }
+}
+{% else %}
+// No assets found
+{% endif %}

@@ -1,0 +1,12 @@
+{
+    "headline1" : { "font": "system", "size": "24", "weight": "medium"},
+    "headline2" : { "font": "system", "size": "20", "weight": "medium"},
+    "body1" : { "font": "system", "size": "14", "weight": "regular"},
+    "body2" : { "font": "system", "size": "16", "weight": "regular"},
+    "subtitle1" : { "font": "system", "size": "14", "weight": "regular"},
+    "subtitle2" : { "font": "system", "size": "14", "weight": "medium"},
+    "button1" : { "font": "system", "size": "14", "weight": "medium"},
+    "button2" : { "font": "system", "size": "16", "weight": "semibold"},
+    "caption1" : { "font": "system", "size": "12", "weight": "regular"},
+    "caption2" : { "font": "system", "size": "12", "weight": "medium"}
+}

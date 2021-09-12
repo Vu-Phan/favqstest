@@ -1,0 +1,62 @@
+// swiftlint:disable all
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
+
+{% if files %}
+{% set nameExt %}UIFont{% endset %}
+{% set forceNamespaces %}{{param.forceProvidesNamespaces|default:"false"}}{% endset %}
+{% set accessModifier %}{% if param.publicAccess %}public{% else %}internal{% endif %}{% endset %}
+{% set appClass %}{{param.forceAppClass|default:"app"}}{% endset %}
+
+// MARK: - Color extension from .xcassets
+import Foundation
+import UIKit
+{% macro fileBlock file %}
+    {% call documentBlock file.document %}
+{% endmacro %}
+{% macro documentBlock document %}
+    {% call propertiesBlock document.properties %}
+{% endmacro %}
+{% macro propertiesBlock properties %}
+    {% call dataBlock document.properties.data %}
+{% endmacro %}
+{% macro dataBlock data %}
+    {% for key,subData in data %}
+		{% call subDataBlock subData key %}
+    {% endfor %}
+    {% if param.allValues %}
+		{% call allValuesBlock data %}
+	{% endif %}
+	{% if param.allValues %}
+		{% call enumNameBlock data %}
+	{% endif %}
+{% endmacro %}
+{% macro subDataBlock subData name %}
+    {% if subData.font == "system" %}
+		static let {{name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = UIFont.systemFont(ofSize: {{subData.size}}, weight: .{{subData.weight}})
+      {% else %}
+		static let {{name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = UIFont(name: {{subData.font}},size: {{subData.size}})
+      {% endif %}
+{% endmacro %}
+{% macro allValuesBlock data %}
+		static let allValues: [UIFont] = [
+	{% for key,subData in data %}
+			{{key}},
+    {% endfor %}
+		]
+{% endmacro %}
+{% macro enumNameBlock data %}
+		enum Name: String {
+	{% for key,subData in data %}
+			case {{key|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = "{{key|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}}"
+    {% endfor %}
+		}
+{% endmacro %}
+
+{{accessModifier}} extension {{nameExt}} {
+    struct {{appClass}} {
+    {% call fileBlock files.first %}
+    }
+}
+{% else %}
+// No file found
+{% endif %}
