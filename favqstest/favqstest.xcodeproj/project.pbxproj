@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4B89050826EDFF0700BF7DA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B89050726EDFF0700BF7DA3 /* AppDelegate.swift */; };
 		4B89050A26EDFF0700BF7DA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B89050926EDFF0700BF7DA3 /* SceneDelegate.swift */; };
-		4B89050C26EDFF0700BF7DA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B89050B26EDFF0700BF7DA3 /* ViewController.swift */; };
+		4B89050C26EDFF0700BF7DA3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B89050B26EDFF0700BF7DA3 /* LoginVC.swift */; };
 		4B89050F26EDFF0700BF7DA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B89050D26EDFF0700BF7DA3 /* Main.storyboard */; };
 		4B89051226EDFF0700BF7DA3 /* favqstest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B89051026EDFF0700BF7DA3 /* favqstest.xcdatamodeld */; };
 		4B89051426EDFF0900BF7DA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B89051326EDFF0900BF7DA3 /* Assets.xcassets */; };
@@ -84,7 +84,7 @@
 		4B89050426EDFF0700BF7DA3 /* favqstest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = favqstest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B89050726EDFF0700BF7DA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B89050926EDFF0700BF7DA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4B89050B26EDFF0700BF7DA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B89050B26EDFF0700BF7DA3 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4B89050E26EDFF0700BF7DA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B89051126EDFF0700BF7DA3 /* favqstest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = favqstest.xcdatamodel; sourceTree = "<group>"; };
 		4B89051326EDFF0900BF7DA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -259,7 +259,7 @@
 			children = (
 				4B89051526EDFF0900BF7DA3 /* LaunchScreen.storyboard */,
 				4B89050D26EDFF0700BF7DA3 /* Main.storyboard */,
-				4B89050B26EDFF0700BF7DA3 /* ViewController.swift */,
+				4B89050B26EDFF0700BF7DA3 /* LoginVC.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -550,7 +550,7 @@
 				4B89056C26EE049A00BF7DA3 /* NSAttributedString+Extension.swift in Sources */,
 				4B89057226EE049A00BF7DA3 /* UILabel+Extension.swift in Sources */,
 				4B89058926EE049A00BF7DA3 /* PrUIPresent.swift in Sources */,
-				4B89050C26EDFF0700BF7DA3 /* ViewController.swift in Sources */,
+				4B89050C26EDFF0700BF7DA3 /* LoginVC.swift in Sources */,
 				4B89053626EE03F300BF7DA3 /* SGFont+UIFont+Extension.swift in Sources */,
 				4B89057826EE049A00BF7DA3 /* URL+Extension.swift in Sources */,
 				4B89057326EE049A00BF7DA3 /* UIButton+Extension.swift in Sources */,
