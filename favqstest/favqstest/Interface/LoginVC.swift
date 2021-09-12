@@ -26,10 +26,6 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // TEST PURPOSE
-        loginTextField.text = "piodecitron@gmail.com"
-        passwordTextField.text = "97D6ZjsPPke"
-        
         checkUserToken()
     }
     
