@@ -76,6 +76,11 @@
 		4B8905B026EE0E6300BF7DA3 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8905AA26EE0E6300BF7DA3 /* AppButton.swift */; };
 		4B8905B126EE0E6300BF7DA3 /* AppSeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8905AB26EE0E6300BF7DA3 /* AppSeparatorView.swift */; };
 		4B8905B226EE0E6300BF7DA3 /* AppNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8905AC26EE0E6300BF7DA3 /* AppNavigationBarView.swift */; };
+		4B8905B426EE132600BF7DA3 /* MainFavQuoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8905B326EE132600BF7DA3 /* MainFavQuoteVC.swift */; };
+		4B8905B626EE148500BF7DA3 /* MainFavQuoteTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8905B526EE148500BF7DA3 /* MainFavQuoteTVCell.swift */; };
+		4B8905B826EE14B300BF7DA3 /* QuoteM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8905B726EE14B300BF7DA3 /* QuoteM.swift */; };
+		4B8905BB26EE14FB00BF7DA3 /* FavQuoteItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8905BA26EE14FB00BF7DA3 /* FavQuoteItemView.swift */; };
+		4B8905BD26EE153200BF7DA3 /* FavQuoteItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B8905BC26EE153200BF7DA3 /* FavQuoteItemView.xib */; };
 		A2B00B26D137BF000171FA4C /* Pods_favqstest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05760B1DC555349E30824E2F /* Pods_favqstest.framework */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +158,11 @@
 		4B8905AA26EE0E6300BF7DA3 /* AppButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		4B8905AB26EE0E6300BF7DA3 /* AppSeparatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSeparatorView.swift; sourceTree = "<group>"; };
 		4B8905AC26EE0E6300BF7DA3 /* AppNavigationBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigationBarView.swift; sourceTree = "<group>"; };
+		4B8905B326EE132600BF7DA3 /* MainFavQuoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFavQuoteVC.swift; sourceTree = "<group>"; };
+		4B8905B526EE148500BF7DA3 /* MainFavQuoteTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFavQuoteTVCell.swift; sourceTree = "<group>"; };
+		4B8905B726EE14B300BF7DA3 /* QuoteM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteM.swift; sourceTree = "<group>"; };
+		4B8905BA26EE14FB00BF7DA3 /* FavQuoteItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavQuoteItemView.swift; sourceTree = "<group>"; };
+		4B8905BC26EE153200BF7DA3 /* FavQuoteItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavQuoteItemView.xib; sourceTree = "<group>"; };
 		5DE07CC8D8DE1D3D6DA405C1 /* Pods-favqstest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-favqstest.debug.xcconfig"; path = "Target Support Files/Pods-favqstest/Pods-favqstest.debug.xcconfig"; sourceTree = "<group>"; };
 		73829D3866255ADF9B8F712E /* Pods-favqstest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-favqstest.release.xcconfig"; path = "Target Support Files/Pods-favqstest/Pods-favqstest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -250,6 +260,7 @@
 				4B89059E26EE09F500BF7DA3 /* UserM.swift */,
 				4B8905A026EE0A1B00BF7DA3 /* AccountDetailM.swift */,
 				4B8905A226EE0A6100BF7DA3 /* ErrorM.swift */,
+				4B8905B726EE14B300BF7DA3 /* QuoteM.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -257,9 +268,12 @@
 		4B89052326EDFF9A00BF7DA3 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				4B8905B926EE14E500BF7DA3 /* Common */,
 				4B89051526EDFF0900BF7DA3 /* LaunchScreen.storyboard */,
 				4B89050D26EDFF0700BF7DA3 /* Main.storyboard */,
 				4B89050B26EDFF0700BF7DA3 /* LoginVC.swift */,
+				4B8905B326EE132600BF7DA3 /* MainFavQuoteVC.swift */,
+				4B8905B526EE148500BF7DA3 /* MainFavQuoteTVCell.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -385,6 +399,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		4B8905B926EE14E500BF7DA3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4B8905BA26EE14FB00BF7DA3 /* FavQuoteItemView.swift */,
+				4B8905BC26EE153200BF7DA3 /* FavQuoteItemView.xib */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		CA1AB7D27ECADD33B0C57362 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -464,6 +487,7 @@
 			files = (
 				4B8905AD26EE0E6300BF7DA3 /* AppNavigationVC.xib in Resources */,
 				4B89051726EDFF0900BF7DA3 /* LaunchScreen.storyboard in Resources */,
+				4B8905BD26EE153200BF7DA3 /* FavQuoteItemView.xib in Resources */,
 				4B89052726EE032400BF7DA3 /* swiftgen.yml in Resources */,
 				4B89053726EE03F300BF7DA3 /* xcassets-uicolor-extension.stencil in Resources */,
 				4B89053A26EE03F300BF7DA3 /* font.json in Resources */,
@@ -547,6 +571,7 @@
 				4B89058E26EE049A00BF7DA3 /* Piorridge.swift in Sources */,
 				4B89059526EE049A00BF7DA3 /* UIView_Extension.swift in Sources */,
 				4B89058226EE049A00BF7DA3 /* UIBezierPath+Extension.swift in Sources */,
+				4B8905BB26EE14FB00BF7DA3 /* FavQuoteItemView.swift in Sources */,
 				4B89056C26EE049A00BF7DA3 /* NSAttributedString+Extension.swift in Sources */,
 				4B89057226EE049A00BF7DA3 /* UILabel+Extension.swift in Sources */,
 				4B89058926EE049A00BF7DA3 /* PrUIPresent.swift in Sources */,
@@ -562,6 +587,7 @@
 				4B89058626EE049A00BF7DA3 /* Array+Extension.swift in Sources */,
 				4B89053326EE03F300BF7DA3 /* SGAssets+UIColor+Extension.swift in Sources */,
 				4B89056E26EE049A00BF7DA3 /* CLLocation+Extension.swift in Sources */,
+				4B8905B826EE14B300BF7DA3 /* QuoteM.swift in Sources */,
 				4B89058026EE049A00BF7DA3 /* UIScrollView+Extension.swift in Sources */,
 				4B89059026EE049A00BF7DA3 /* PrLog.swift in Sources */,
 				4B89058D26EE049A00BF7DA3 /* PrApp.swift in Sources */,
@@ -576,6 +602,7 @@
 				4B89050826EDFF0700BF7DA3 /* AppDelegate.swift in Sources */,
 				4B89057C26EE049A00BF7DA3 /* Bool+Extension.swift in Sources */,
 				4B89050A26EDFF0700BF7DA3 /* SceneDelegate.swift in Sources */,
+				4B8905B626EE148500BF7DA3 /* MainFavQuoteTVCell.swift in Sources */,
 				4B89058A26EE049A00BF7DA3 /* PrGradientView.swift in Sources */,
 				4B89059326EE049A00BF7DA3 /* PrDevice.swift in Sources */,
 				4B8905A326EE0A6100BF7DA3 /* ErrorM.swift in Sources */,
@@ -601,6 +628,7 @@
 				4B89057026EE049A00BF7DA3 /* UIWindow+Extension.swift in Sources */,
 				4B8905B226EE0E6300BF7DA3 /* AppNavigationBarView.swift in Sources */,
 				4B89059D26EE09C400BF7DA3 /* SessionM.swift in Sources */,
+				4B8905B426EE132600BF7DA3 /* MainFavQuoteVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

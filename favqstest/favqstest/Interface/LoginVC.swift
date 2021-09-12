@@ -66,7 +66,8 @@ class LoginVC: UIViewController {
     
     // MARK: - Navigation
     private func showNext() {
-
+        let vcToShow = MainFavQuoteVC()
+        self.navigationController?.pushViewController(vcToShow, animated: true)
     }
     
     

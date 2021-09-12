@@ -56,4 +56,25 @@ class ServiceFavqs {
             done(user)
         }, showDebug: true)
     }
+    
+    func getUserFavoriteQuotes(login: String, page: Int = 0, done: @escaping ((_ quotes: [QuoteM], _ page: Int, _ lastPage: Bool) -> Void)) {
+        ServiceManager.shared.call("quotes/?filter=\(login)&type=user&page=\(page)", data: nil, method: .get, done: { (json, error) in
+            var quotes: [QuoteM] = []
+            var page = 0
+            var lastPage = false
+            
+            if let json = json {
+                page = json["page"].intValue
+                lastPage = json["last_page"].boolValue
+                
+                if let jsonQuotes = json["quotes"].array {
+                    jsonQuotes.forEach({
+                        let quote = QuoteM.init(fromJSON: $0)
+                        quotes.append(quote)
+                    })
+                }
+            }
+            done(quotes, page, lastPage)
+        })
+    }
 }
